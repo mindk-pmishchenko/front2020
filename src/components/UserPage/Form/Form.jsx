@@ -1,14 +1,23 @@
-import Text from './components/Text/Text';
+import React, {useState} from 'react';
 
-function Form({title, size, onSubmit}) {
-    const initialInputValue = 'Test value';
-    onSubmit('Submitted form data!');
+function Form({counter}) {
+    const [name, setName] = useState('initial name');
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        console.log(event.target[0].value);
+        setName(event.target[0].value);
+    };
 
     return (
-        <div>
-            {title}
-            {size && <Text inputSize={size} initial={initialInputValue}/>}
-        </div>
+        <>
+            <div>Hello, {name}</div>
+            <div>Clicked: {counter}</div>
+            <form onSubmit={handleSubmit}>
+                <input name="name"/>
+                <button type="submit">Save</button>
+            </form>
+        </>
     );
 }
 
