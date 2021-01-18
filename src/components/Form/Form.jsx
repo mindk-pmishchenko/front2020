@@ -6,7 +6,7 @@ function Form({title, size, onSubmit, counter, initialValues, userData}) {
     const initialInputValue = 'Test value';
     onSubmit('Submitted form data!');
 
-    throw new Error('Some error!');
+    // throw new Error('Some error!');
 
 
     return (

@@ -2,10 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/admin/:action(test|new)/:id/:name/" render={props => {
+          return <App {...props} testProp={1} />
+        }} />
+        <Route exact path="/new" render={props => {
+          return <App {...props} testProp={2} />
+        }} />
+        <Route path="*">404 Error</Route>
+      </Switch>
+      <Switch>
+        <Route path="/test" render={props => {
+          return <App {...props} testProp={3} />
+        }} />
+        <Route path="/new" render={props => {
+          return <App {...props} testProp={4} />
+        }} />
+        <Route path="*">404 Error #2</Route>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
