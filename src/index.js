@@ -3,32 +3,40 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import UsersListContainer from "./containers/Users/UsersList";
+import {
+    QueryClient,
+    QueryClientProvider,
+} from 'react-query';
+
+const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/users">
-          <UsersListContainer/>
-        </Route>
-        {/*<Route exact path="/admin/:action(test|new)/:id/:name/" render={props => {*/}
-        {/*  return <App {...props} testProp={1} />*/}
-        {/*}} />*/}
-        {/*<Route exact path="/new" render={props => {*/}
-        {/*  return <App {...props} testProp={2} />*/}
-        {/*}} />*/}
-        {/*<Route path="*">404 Error</Route>*/}
-      </Switch>
-      {/*<Switch>*/}
-      {/*  <Route path="/test" render={props => {*/}
-      {/*    return <App {...props} testProp={3} />*/}
-      {/*  }} />*/}
-      {/*  <Route path="/new" render={props => {*/}
-      {/*    return <App {...props} testProp={4} />*/}
-      {/*  }} />*/}
-      {/*  <Route path="*">404 Error #2</Route>*/}
-      {/*</Switch>*/}
-    </BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+          <Switch>
+            <Route exact path="/users">
+              <UsersListContainer/>
+            </Route>
+            {/*<Route exact path="/admin/:action(test|new)/:id/:name/" render={props => {*/}
+            {/*  return <App {...props} testProp={1} />*/}
+            {/*}} />*/}
+            {/*<Route exact path="/new" render={props => {*/}
+            {/*  return <App {...props} testProp={2} />*/}
+            {/*}} />*/}
+            {/*<Route path="*">404 Error</Route>*/}
+          </Switch>
+          {/*<Switch>*/}
+          {/*  <Route path="/test" render={props => {*/}
+          {/*    return <App {...props} testProp={3} />*/}
+          {/*  }} />*/}
+          {/*  <Route path="/new" render={props => {*/}
+          {/*    return <App {...props} testProp={4} />*/}
+          {/*  }} />*/}
+          {/*  <Route path="*">404 Error #2</Route>*/}
+          {/*</Switch>*/}
+        </BrowserRouter>
+      </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

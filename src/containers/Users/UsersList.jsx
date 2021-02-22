@@ -1,27 +1,39 @@
-import React, {useState, useEffect, createContext} from 'react';
+import React, {createContext, useCallback, useEffect} from 'react';
+import {
+    useQuery,
+    useMutation
+} from 'react-query';
 
 import UsersList from "../../components/UsersList/UsersList";
-import {getUsers} from "../../containers/Users/hooks/crud";
+import {getUsers, createUserRequest} from "../../containers/Users/hooks/crud";
+import UserCreate from "../../components/UserCreate/UserCreate";
 
 export const UsersContext = createContext([]);
 export const CurrentUserContext = createContext({});
 
 function UsersListContainer() {
-    const [users, setUsers] = useState([]);
+    const {data: response, isFetching} = useQuery('users', () => getUsers({id: 1}));
+    const users = response?.data || [];
 
-    const getData = async () => {
-        const {data} = await getUsers({id: 1});
-        setUsers(data);
-    };
+    const {mutate: createUser} = useMutation(createUserRequest);
 
-    useEffect(getData, []);
+    const onSubmit = useCallback(async formData => {
+        try {
+            const data = await createUser(formData);
 
-    const usersContext = {users, currentUser: {name: 'Vasya'}};
+            // console.log('User id: ', id);
+        } catch (e) {
+            console.log(e);
+        }
+    }, [createUser]);
+
+    // useEffect(() => onSubmit({name: 'Ivan'}), []);
 
     return (
         <CurrentUserContext.Provider value={{name: 'Vasya'}} >
             <UsersContext.Provider value={users} >
-                <UsersList />
+                <UsersList isFetching={isFetching} />
+                <UserCreate onSubmit={onSubmit} />
             </UsersContext.Provider>
         </CurrentUserContext.Provider>
     );

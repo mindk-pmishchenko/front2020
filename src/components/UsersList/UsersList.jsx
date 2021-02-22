@@ -1,9 +1,10 @@
 import UsersListInner from "./UsersListInner";
 
-function UsersList() {
+function UsersList({isFetching}) {
     return (
         <div>
-            <UsersListInner />
+            {isFetching && 'Loading...'}
+            {!isFetching && <UsersListInner />}
         </div>
     );
 }
