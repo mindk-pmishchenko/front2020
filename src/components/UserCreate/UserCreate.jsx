@@ -1,7 +1,18 @@
-import { Formik, Field, Form } from 'formik';
+import {useState} from "react";
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import AddIcon from '@material-ui/icons/Add';
+import Fab from '@material-ui/core/Fab';
+import Tooltip from '@material-ui/core/Tooltip';
+
+import CustomTextField from "../Fields/CustomTextField";
+
 function UserCreate({onSubmit}) {
+    const [isOpen, setIsOpen] = useState(false);
 
     const userSchema = Yup.object().shape({
         firstName: Yup.string()
@@ -13,40 +24,47 @@ function UserCreate({onSubmit}) {
     const handleSubmit = data => {
         console.log(data);
         onSubmit(data);
+        handleClose();
     };
+
+    const handleClose = () => setIsOpen(false);
+    const handleOpen = () => setIsOpen(true);
 
     return (
         <div>
-          User Creation Form
-            <Formik
-                initialValues={{firstName: ''}}
-                validationSchema={userSchema}
-                onSubmit={handleSubmit}
+            <Tooltip title="Add new user to the list" aria-label="add">
+                <Fab color="primary" onClick={handleOpen}>
+                    <AddIcon />
+                </Fab>
+            </Tooltip>
+            <Dialog
+                open={isOpen}
+                onClose={handleClose}
             >
-                {({ errors, touched }) => (
-                    <Form>
-                        <div>
-                            <label htmlFor="firstName">First Name</label>
-                            <Field id="firstName" name="firstName" placeholder="Enter first name..." />
-                            {errors.firstName && touched.firstName ? (
-                                <div>{errors.firstName}</div>
-                            ) : null}
-                        </div>
+                <DialogContent>
+                    <Formik
+                        initialValues={{firstName: ''}}
+                        validationSchema={userSchema}
+                        onSubmit={handleSubmit}
+                    >
+                        {({ errors, touched, values, handleChange }) => (
+                            <Form>
+                                <div>
+                                    <CustomTextField
+                                        name="firstName"
+                                        id="firstName"
+                                        label="First Name"
+                                    />
+                                </div>
 
-                        <div>
-                            <label htmlFor="email">Email</label>
-                            <Field
-                                id="email"
-                                name="email"
-                                placeholder="jane@acme.com"
-                                type="email"
-                            />
-                        </div>
-
-                        <button type="submit">Submit</button>
-                    </Form>
-                )}
-            </Formik>
+                                <Button type="submit" variant="contained" color="primary">
+                                    Submit
+                                </Button>
+                            </Form>
+                        )}
+                    </Formik>
+                </DialogContent>
+            </Dialog>
         </div>
     );
 }

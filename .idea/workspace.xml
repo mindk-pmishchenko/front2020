@@ -6,10 +6,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserCreate/UserCreate.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserCreate/UserCreate.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersListInner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersListInner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersListInnerMap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersListInnerMap.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Users/UsersList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Users/UsersList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Users/hooks/crud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Users/hooks/crud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +38,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/containers/Users" />
-      <recent name="$PROJECT_DIR$/src/containers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/UserCreate" />
       <recent name="$PROJECT_DIR$/src/components/UsersList" />
+      <recent name="$PROJECT_DIR$/src/containers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/containers/Users" />
       <recent name="$PROJECT_DIR$/src/containers" />
     </key>
   </component>

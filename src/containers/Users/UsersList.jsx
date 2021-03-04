@@ -4,6 +4,10 @@ import {
     useMutation
 } from 'react-query';
 
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+
 import UsersList from "../../components/UsersList/UsersList";
 import {getUsers, createUserRequest} from "../../containers/Users/hooks/crud";
 import UserCreate from "../../components/UserCreate/UserCreate";
@@ -32,8 +36,13 @@ function UsersListContainer() {
     return (
         <CurrentUserContext.Provider value={{name: 'Vasya'}} >
             <UsersContext.Provider value={users} >
-                <UsersList isFetching={isFetching} />
-                <UserCreate onSubmit={onSubmit} />
+                <Card>
+                    <CardHeader title="Users list" />
+                    <CardContent>
+                        <UsersList isFetching={isFetching} />
+                        <UserCreate onSubmit={onSubmit} />
+                    </CardContent>
+                </Card>
             </UsersContext.Provider>
         </CurrentUserContext.Provider>
     );
