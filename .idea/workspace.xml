@@ -6,9 +6,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Fields/CustomTextField.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Fields/CustomTextField.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserCreate/UserCreate.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserCreate/UserCreate.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersListInner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersListInner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersListInnerMap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersListInnerMap.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Users/UsersList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Users/UsersList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/UserCreate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -38,13 +37,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/containers/Users" />
+      <recent name="$PROJECT_DIR$/src/containers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/UserCreate" />
       <recent name="$PROJECT_DIR$/src/components/UsersList" />
-      <recent name="$PROJECT_DIR$/src/containers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/containers/Users" />
       <recent name="$PROJECT_DIR$/src/containers" />
     </key>
   </component>
@@ -65,6 +64,7 @@
       <workItem from="1610981270896" duration="4664000" />
       <workItem from="1611047505348" duration="389000" />
       <workItem from="1613062762550" duration="6390000" />
+      <workItem from="1616087524814" duration="4051000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 2, 26/11/20">
       <created>1606818945599</created>
@@ -80,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610994613876</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lesson 8, 4/3/21">
+      <created>1614881702443</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614881702443</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,17 +96,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lesson 2, 26/11/20" />
     <MESSAGE value="lesson 4, 18/1/21" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 4, 18/1/21" />
+    <MESSAGE value="lesson 8, 4/3/21" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 8, 4/3/21" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="309" y="47" key="CommitChangelistDialog2" timestamp="1610994613125">
+    <state x="309" y="0" width="821" height="801" key="CommitChangelistDialog2" timestamp="1614881658363">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="309" y="47" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1610994613125" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1610994818472">
+    <state x="309" y="0" width="821" height="801" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1614881658363" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1614881723470">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1610994818472" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1614881723470" />
     <state x="287" y="74" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613065783775">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

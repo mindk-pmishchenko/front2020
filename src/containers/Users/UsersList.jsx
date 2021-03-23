@@ -16,20 +16,20 @@ export const UsersContext = createContext([]);
 export const CurrentUserContext = createContext({});
 
 function UsersListContainer() {
-    const {data: response, isFetching} = useQuery('users', () => getUsers({id: 1}));
+    const {data: response, isFetching, refetch} = useQuery('users', () => getUsers({id: 1}));
     const users = response?.data || [];
 
     const {mutate: createUser} = useMutation(createUserRequest);
 
     const onSubmit = useCallback(async formData => {
         try {
-            const data = await createUser(formData);
-
+            // const data = await createUser(formData);
+            refetch();
             // console.log('User id: ', id);
         } catch (e) {
             console.log(e);
         }
-    }, [createUser]);
+    }, [createUser, refetch]);
 
     // useEffect(() => onSubmit({name: 'Ivan'}), []);
 
